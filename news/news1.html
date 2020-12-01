@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/news.css" />
+    <script src="../js/main.js" defer></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News 1</title>
+  </head>
+  <body>
+    <header>
+      <div class="maxw header-inner">
+          <div class="logo">
+              <a href="../index.html">
+                  <h1>logo</h1>
+              </a>
+          </div>
+
+          <nav>
+              <a href="../news/index.html" class="nav_item">Новости</a>
+              <a href="../plays/index.html" class="nav_item">Афиша</a>
+              <a href="../blog/index.html" class="nav_item">Блог</a>
+              <a href="../index.html#theaters" class="nav_item">Театры</a>
+          </nav>
+
+          <div class="right">
+              <div class="switcher">
+                  <div class="title" onclick="dropdown(this)">
+                      <span id="sel-lang" data-translate="selected-lang">ENG</span>
+                      <span class="arrow right"></span>
+                      <span class="arrow left"></span>
+                  </div>
+                  <div class="dropdown">
+                      <span data-translate="another-lang" id="another-lang" onclick="change_lang()">РУС</span>
+                  </div>
+              </div>
+
+              <div class="burger" onclick="toggleMenu()">
+                  <span></span>
+              </div>
+          </div>
+      </div>
+
+      <div class="mobile_menu">
+          <ul>
+              <li>
+                  <a href="../news/index.html" class="nav_item">Новости</a>
+              </li>
+
+              <li>
+                  <a href="../plays/index.html" class="nav_item">Афиша</a>
+              </li>
+
+              <li>
+                  <a href="../blog/index.html" class="nav_item">Блог</a>
+              </li>
+          </ul>
+
+          <div class="switcher">
+              <div class="title" onclick="dropdown(this)">
+                  <span id="sel-lang" data-translate="selected-lang">ENG</span>
+                  <span class="arrow right"></span>
+                  <span class="arrow left"></span>
+              </div>
+              <div class="dropdown">
+                  <span data-translate="another-lang" id="another-lang" onclick="change_lang()">РУС</span>
+              </div>
+          </div>
+
+          <div class="user_counter">
+              <div class="title">Пользователей онлайн</div>
+              <div class="count"></div>
+          </div>
+      </div>
+  </header>
+
+    <main class="topm-sm maxw">
+      <div class="container">
+        <div class="page-title">
+          Дирижер Максим Емельянычев поборется за «Грэмми»
+        </div>
+
+        <div class="info">
+          <div class="meta">
+            <div class="author">
+              <a href="#">Пахан Про</a>
+            </div>
+
+            <div class="date">15:26, 25 ноября 2020</div>
+          </div>
+
+          <div class="tags"><a href="#">Пахан</a>, <a href="#">Про</a></div>
+        </div>
+
+        <div class="post_img">
+          <img src="../img/newspage1.jpg" />
+        </div>
+
+        <div class="post_body">
+          <p>
+            <em
+              >Дирижер Максим Емельянычев номинирован в категории «Лучшая
+              оперная запись».</em
+            >
+          </p>
+
+          <p>
+            Престижную музыкальную награду он может получить за оперу Генделя
+            «Агриппина» в составе коллектива Il Pomo D’Oro. Вместе с российским
+            маэстро, за запись «Агриппины» номинированы американская оперная
+            певица Джойс Дидонато и продюсер Дэниэл Залай.
+          </p>
+
+          <p>
+            Максим Емельянчев стал главным дирижером коллектива Il Pomo D’Oro в
+            2016 году. Также он в течение последних двух лет возглавляет
+            Шотландский камерный оркестр.
+          </p>
+
+          <p>Полный список номинантов <a href="#">здесь.</a></p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="maxw footer-inner">
+        <div class="copyright">© Пахан Про 2020-2021</div>
+        <div class="links">
+          <div class="link">
+            <a href="#">
+              <div
+                class="icon"
+                style="background-image: url(../img/vk-icon.svg)"
+              ></div>
+            </a>
+          </div>
+
+          <div class="link">
+            <a>
+              <div class="icon"></div>
+            </a>
+          </div>
+
+          <div class="link">
+            <a>
+              <div class="icon"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

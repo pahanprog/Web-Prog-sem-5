@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/main.css" />
+    <script src="../js/main.js" defer></script>
+    <script src="../js/imgSlider.js" defer></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Большой театр кукол</title>
+
+    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+    <script>
+      window.googletag = window.googletag || {cmd: []};
+      googletag.cmd.push(function() {
+        googletag
+            .defineSlot(
+                '/6355419/Travel/Europe/France/Paris', [300, 250], 'banner-ad')
+            .addService(googletag.pubads());
+        googletag.enableServices();
+      });
+    </script>
+</head>
+<body>
+
+    <header>
+        <div class="maxw header-inner">
+          <div class="logo">
+            <a href="../index.html">
+              <h1>logo</h1>
+            </a>
+          </div>
+  
+          <nav>
+            <a href="../news/index.html" class="nav_item">Новости</a>
+            <a href="../plays/index.html" class="nav_item">Афиша</a>
+            <a href="../blog/index.html" class="nav_item">Блог</a>
+            <a href="../index.html#theaters" class="nav_item">Театры</a>
+          </nav>
+  
+          <div class="right">
+            <div class="switcher">
+              <div class="title" onclick="dropdown(this)">
+                <span id="sel-lang" data-translate="selected-lang">ENG</span>
+                <span class="arrow right"></span>
+                <span class="arrow left"></span>
+              </div>
+              <div class="dropdown">
+                <span
+                  data-translate="another-lang"
+                  id="another-lang"
+                  onclick="change_lang()"
+                  >РУС</span
+                >
+              </div>
+            </div>
+  
+            <div class="burger" onclick="toggleMenu()">
+              <span></span>
+            </div>
+          </div>
+        </div>
+  
+        <div class="mobile_menu">
+          <ul>
+            <li>
+              <a href="../news/index.html" class="nav_item">Новости</a>
+            </li>
+  
+            <li>
+              <a href="../plays/index.html" class="nav_item">Афиша</a>
+            </li>
+  
+            <li>
+              <a href="../blog/index.html" class="nav_item">Блог</a>
+            </li>
+          </ul>
+  
+          <div class="switcher">
+            <div class="title" onclick="dropdown(this)">
+              <span id="sel-lang" data-translate="selected-lang">ENG</span>
+              <span class="arrow right"></span>
+              <span class="arrow left"></span>
+            </div>
+            <div class="dropdown">
+              <span
+                data-translate="another-lang"
+                id="another-lang"
+                onclick="change_lang()"
+                >РУС</span
+              >
+            </div>
+          </div>
+  
+          <div class="user_counter">
+            <div class="title">Пользователей онлайн</div>
+            <div class="count"></div>
+          </div>
+        </div>
+      </header>
+
+      <main class="topm-sm maxw">
+        <div class="section_title">Большой театр кукол</div>
+
+        <div class="center">
+          <div class="inner">
+            <div class="img_slider_wrapper">
+              <div class="img_slider">
+                <div class="img_wrapper">
+                  <img src="../img/маленькийпринц.jpg" alt="" />
+                </div>
+  
+                <div class="img_wrapper">
+                  <img src="../img/маленькийпринц2.jpg" alt="" />
+                </div>
+  
+                <div class="img_wrapper">
+                  <img src="../img/маленькийпринц3.jpg" alt="" />
+                </div>
+              </div>
+  
+              <div class="actions">
+                <div class="open"></div>
+                <div class="close"></div>
+              </div>
+  
+              <div
+                class="arrow-btn left"
+                onclick="imgSliderArrowClick(this)"
+              ></div>
+  
+              <div
+                class="arrow-btn right"
+                onclick="imgSliderArrowClick(this)"
+              ></div>
+            </div>
+  
+            <div class="arrow-btn left" onclick="imgSliderArrowClick(this)"></div>
+  
+            <div
+              class="arrow-btn right"
+              onclick="imgSliderArrowClick(this)"
+            ></div>
+          </div>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5794273264455!2d30.349856216509593!3d59.93912066902132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469631a04c4efee5%3A0xde5dc3faa67d813a!2z0JHQvtC70YzRiNC-0Lkg0YLQtdCw0YLRgCDQutGD0LrQvtC7!5e0!3m2!1sru!2sru!4v1606689213843!5m2!1sru!2sru" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <!-- <div id="banner-ad">
+          <script>
+            googletag.cmd.push(function() {
+              googletag.display('banner-ad');
+            });
+          </script>
+        </div> -->
+      </main>
+
+      <footer>
+        <div class="maxw footer-inner">
+          <div class="copyright">© Пахан Про 2020-2021</div>
+          <div class="links">
+            <div class="link">
+              <a href="#">
+                <div
+                  class="icon"
+                  style="background-image: url(../img/vk-icon.svg)"
+                ></div>
+              </a>
+            </div>
+  
+            <div class="link">
+              <a>
+                <div class="icon"></div>
+              </a>
+            </div>
+  
+            <div class="link">
+              <a>
+                <div class="icon"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    
+</body>
+</html>

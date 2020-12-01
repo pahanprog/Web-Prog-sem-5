@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../css/main.css" />
+    <script src="../js/main.js" defer></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog 1</title>
+  </head>
+  <body>
+    <header>
+      <div class="maxw header-inner">
+          <div class="logo">
+              <a href="../index.html">
+                  <h1>logo</h1>
+              </a>
+          </div>
+
+          <nav>
+              <a href="../news/index.html" class="nav_item">Новости</a>
+              <a href="../plays/index.html" class="nav_item">Афиша</a>
+              <a href="../blog/index.html" class="nav_item">Блог</a>
+              <a href="../index.html#theaters" class="nav_item">Театры</a>
+          </nav>
+
+          <div class="right">
+              <div class="switcher">
+                  <div class="title" onclick="dropdown(this)">
+                      <span id="sel-lang" data-translate="selected-lang">ENG</span>
+                      <span class="arrow right"></span>
+                      <span class="arrow left"></span>
+                  </div>
+                  <div class="dropdown">
+                      <span data-translate="another-lang" id="another-lang" onclick="change_lang()">РУС</span>
+                  </div>
+              </div>
+
+              <div class="burger" onclick="toggleMenu()">
+                  <span></span>
+              </div>
+          </div>
+      </div>
+
+      <div class="mobile_menu">
+          <ul>
+              <li>
+                  <a href="../news/index.html" class="nav_item">Новости</a>
+              </li>
+
+              <li>
+                  <a href="../plays/index.html" class="nav_item">Афиша</a>
+              </li>
+
+              <li>
+                  <a href="../blog/index.html" class="nav_item">Блог</a>
+              </li>
+          </ul>
+
+          <div class="switcher">
+              <div class="title" onclick="dropdown(this)">
+                  <span id="sel-lang" data-translate="selected-lang">ENG</span>
+                  <span class="arrow right"></span>
+                  <span class="arrow left"></span>
+              </div>
+              <div class="dropdown">
+                  <span data-translate="another-lang" id="another-lang" onclick="change_lang()">РУС</span>
+              </div>
+          </div>
+
+          <div class="user_counter">
+              <div class="title">Пользователей онлайн</div>
+              <div class="count"></div>
+          </div>
+      </div>
+  </header>
+
+    <main class="topm-sm maxw">
+      <div class="container">
+        <div class="page-title">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis,
+          obcaecati!
+        </div>
+
+        <div class="info">
+          <div class="meta">
+            <div class="author">
+              <a href="#">Пахан Про</a>
+            </div>
+
+            <div class="date">15:26, 25 ноября 2020</div>
+          </div>
+
+          <div class="tags"><a href="#">Пахан</a>, <a href="#">Про</a></div>
+        </div>
+
+        <div class="post_img">
+          <img src="../img/театр.jpg" />
+        </div>
+
+        <div class="post_body">
+          <p>
+            <em>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis,
+              obcaecati!
+            </em>
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+            provident, modi molestias nesciunt veniam laborum mollitia, tenetur
+            atque ipsa ullam eos eveniet voluptate, doloremque ut dolore
+            doloribus at pariatur quod.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Exercitationem animi esse placeat commodi accusamus architecto quam
+            soluta blanditiis tempora libero, perferendis eveniet, quo quasi.
+            Sed harum, natus, consequatur odit voluptatum rem accusamus maxime
+            perferendis similique adipisci non commodi ab quibusdam cupiditate
+            obcaecati dolores mollitia, eos optio in ipsum? Mollitia,
+            blanditiis.
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi
+            voluptates officiis, earum ipsum illum illo recusandae enim laborum
+            magni cupiditate pariatur amet! Ipsa commodi neque laborum
+            consequuntur similique maxime quidem debitis cumque aperiam
+            necessitatibus eos iure, sunt voluptates ad consequatur. Nam
+            obcaecati quis quia sapiente placeat repudiandae architecto iste
+            qui!
+          </p>
+          <p>
+            <img src="../img/театр.jpg" />
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id dolores
+            ullam quam praesentium corporis, optio odio porro, vero deserunt
+            pariatur voluptas voluptatum atque. Natus, impedit repellendus.
+            Distinctio numquam, iure tempora nulla voluptas repellat! Nostrum
+            deleniti quam perferendis vero cum repellat, necessitatibus
+            distinctio ea! Natus, nisi! Rem placeat illum consequuntur et odit
+            sit non nisi sequi blanditiis amet. Illum soluta blanditiis nostrum
+            vel explicabo mollitia culpa dolorem porro vitae? Quisquam animi
+            ipsam voluptatum at dolorem nemo adipisci repudiandae. Aliquid modi
+            soluta nesciunt, nihil quia tempora dignissimos eveniet laborum
+            dolorem! Tenetur debitis modi laboriosam veniam maiores aut cum
+            molestiae optio in? Soluta?
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti
+            fugiat fugit beatae blanditiis voluptates ratione porro atque,
+            officiis natus voluptatem.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="maxw footer-inner">
+        <div class="copyright">© Пахан Про 2020-2021</div>
+        <div class="links">
+          <div class="link">
+            <a href="#">
+              <div
+                class="icon"
+                style="background-image: url(../img/vk-icon.svg)"
+              ></div>
+            </a>
+          </div>
+
+          <div class="link">
+            <a>
+              <div class="icon"></div>
+            </a>
+          </div>
+
+          <div class="link">
+            <a>
+              <div class="icon"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

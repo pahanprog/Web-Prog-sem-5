@@ -1,0 +1,111 @@
+.items {
+  margin-right: 30px;
+}
+
+.items .item {
+  width: 100%;
+  min-height: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.items .item a {
+  text-decoration: none;
+  overflow: hidden;
+  width: 33.3333%;
+  height: 180px;
+  margin-right: 30px;
+  position: relative;
+}
+
+.items .item a .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: -webkit-transform 3s ease-out;
+  transition: -webkit-transform 3s ease-out;
+  transition: transform 3s ease-out;
+  transition: transform 3s ease-out, -webkit-transform 3s ease-out;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.items .item:hover .img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.items .item .item_right .title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.items .item .item_right .title:hover {
+  opacity: 0.6;
+}
+
+.items .item .item_right .description {
+  font-size: 22px;
+  margin-bottom: 10px;
+  line-height: 34px;
+  width: 80%;
+}
+
+.items .item .item_right .date {
+  font-style: italic;
+  font-size: 14px;
+}
+
+.items .item + .item {
+  margin-top: 30px;
+}
+
+@media (max-width: 1200px) {
+  .items {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: 15px 30px;
+    margin-right: 0;
+  }
+  .items .item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .items .item a {
+    width: 100%;
+  }
+  .items .item a .img {
+    background-position: center;
+  }
+  .items .item + .item {
+    margin-top: 0;
+  }
+  .items .item .item_right {
+    padding: 15px;
+    border: 1px;
+    border: 1px solid #eceeef;
+  }
+}
+
+@media (max-width: 768px) {
+  .items {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 30px;
+  }
+  .items .item a {
+    height: 240px;
+  }
+}
+/*# sourceMappingURL=news.css.map */

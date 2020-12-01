@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/plays.css" />
+    <script src="../js/main.js" defer></script>
+    <script src="../js/imgSlider.js" defer></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Play 1</title>
+  </head>
+  <body>
+    <header>
+      <div class="maxw header-inner">
+        <div class="logo">
+          <a href="../index.html">
+            <h1>logo</h1>
+          </a>
+        </div>
+
+        <nav>
+          <a href="../news/index.html" class="nav_item">Новости</a>
+          <a href="../plays/index.html" class="nav_item">Афиша</a>
+          <a href="../blog/index.html" class="nav_item">Блог</a>
+          <a href="../index.html#theaters" class="nav_item">Театры</a>
+        </nav>
+
+        <div class="right">
+          <div class="switcher">
+            <div class="title" onclick="dropdown(this)">
+              <span id="sel-lang" data-translate="selected-lang">ENG</span>
+              <span class="arrow right"></span>
+              <span class="arrow left"></span>
+            </div>
+            <div class="dropdown">
+              <span
+                data-translate="another-lang"
+                id="another-lang"
+                onclick="change_lang()"
+                >РУС</span
+              >
+            </div>
+          </div>
+
+          <div class="burger" onclick="toggleMenu()">
+            <span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mobile_menu">
+        <ul>
+          <li>
+            <a href="../news/index.html" class="nav_item">Новости</a>
+          </li>
+
+          <li>
+            <a href="../plays/index.html" class="nav_item">Афиша</a>
+          </li>
+
+          <li>
+            <a href="../blog/index.html" class="nav_item">Блог</a>
+          </li>
+        </ul>
+
+        <div class="switcher">
+          <div class="title" onclick="dropdown(this)">
+            <span id="sel-lang" data-translate="selected-lang">ENG</span>
+            <span class="arrow right"></span>
+            <span class="arrow left"></span>
+          </div>
+          <div class="dropdown">
+            <span
+              data-translate="another-lang"
+              id="another-lang"
+              onclick="change_lang()"
+              >РУС</span
+            >
+          </div>
+        </div>
+
+        <div class="user_counter">
+          <div class="title">Пользователей онлайн</div>
+          <div class="count"></div>
+        </div>
+      </div>
+    </header>
+
+    <main class="topm-sm maxw">
+      <div class="section_title">Маленький принц</div>
+
+      <div class="center">
+        <div class="inner">
+          <div class="img_slider_wrapper">
+            <div class="img_slider">
+              <div class="img_wrapper">
+                <img src="../img/маленькийпринц.jpg" alt="" />
+              </div>
+
+              <div class="img_wrapper">
+                <img src="../img/маленькийпринц2.jpg" alt="" />
+              </div>
+
+              <div class="img_wrapper">
+                <img src="../img/маленькийпринц3.jpg" alt="" />
+              </div>
+            </div>
+
+            <div class="actions">
+              <div class="open"></div>
+              <div class="close"></div>
+            </div>
+
+            <div
+              class="arrow-btn left"
+              onclick="imgSliderArrowClick(this)"
+            ></div>
+
+            <div
+              class="arrow-btn right"
+              onclick="imgSliderArrowClick(this)"
+            ></div>
+          </div>
+
+          <div class="arrow-btn left" onclick="imgSliderArrowClick(this)"></div>
+
+          <div
+            class="arrow-btn right"
+            onclick="imgSliderArrowClick(this)"
+          ></div>
+        </div>
+      </div>
+
+      <div class="info">
+        <div class="topm-sm seperator">
+          <div class="title">
+            <div class="circle"></div>
+            О спектакле
+          </div>
+          <div class="line"></div>
+        </div>
+
+        <div class="row topm-sm">
+          <div class="title">
+            <div class="genres">
+              <a href="#">Кукольный</a>
+              <a href="#">Детский</a>
+              <a href="#">Драматический</a>
+            </div>
+            <div class="duration">1 час 10 минут</div>
+            <div class="restrictions">6+</div>
+          </div>
+          <div class="content">
+            <div class="main_txt">
+              Экзюпери для младших школьников — нарядный и сентиментальный
+            </div>
+            <div class="txt">
+              Маленький принц в постановке Руслана Кудашова — щекастая куколка с
+              глазами-блюдцами — похож на пупса и не имеет ничего общего с той
+              хрупкой, аристократичной фигуркой подростка, которую рисовал на
+              полях книги Экзюпери. В результате дошколята оказываются более
+              терпеливыми зрителями, чем школьники: последним совершенно не с
+              кем себя идентифицировать. Зато у многих взрослых, возможно,
+              найдется общая проблема с мужчиной средних лет, что сидит за
+              мольбертом в шлеме летчика, раскрашивает картинку и жалуется на
+              взрослых, отбивших у него желание рисовать. Спектакль волшебно
+              красив и, как всегда у Кудашова, сентиментален. Принц, отправляясь
+              в последний полет, надевает миниатюрную копию шлема летчика. У
+              куклы Лиса при расставании с мальчиком блестят, не высыхая,
+              всамделишные слезы. А в финале летчик снимает одну из своих
+              картинок, и за ней обнаруживается звездный небосвод, что мерцает
+              так же волшебно и многозначительно, как должно мерцать небо в
+              рождественских мистериях.
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="title">Создатели</div>
+
+          <div class="content">
+            <div class="director">
+              Режисcер:
+              <a href="#">Руслан Кудашов</a>
+            </div>
+
+            <div class="actors">
+              Актеры:
+              <div class="actor_list">
+                <a href="#">Руслан Кудашов</a>
+                <a href="#">Виктория Короткова</a>
+                <a href="#">Наталья Сизова</a>
+                <a href="#">Василиса Ручимская</a>
+                <a href="#">Радик Галиуллин</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topm-sm seperator">
+          <div class="title">
+            <div class="circle"></div>
+            Расписание
+          </div>
+          <div class="line"></div>
+        </div>
+
+        <div class="schedule topm-sm">
+          <div class="row">
+            <div class="location">
+              <div
+                class="img"
+                style="background-image: url(../img/btklogo.webp)"
+              ></div>
+              <div class="adress_name">
+                <div class="name">Большой театр кукол</div>
+                <div class="adress">Некрасова, 10</div>
+              </div>
+            </div>
+
+            <div class="info">
+              <div class="day">6 декабря, вс</div>
+              <div class="time">14:00</div>
+              <div class="ticket">
+                <a href="https://spb.kassir.ru/teatr/malenkiy-prints-905#431349"
+                  >Купить билет</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="location">
+              <div
+                class="img"
+                style="background-image: url(../img/btklogo.webp)"
+              ></div>
+              <div class="adress_name">
+                <div class="name">Большой театр кукол</div>
+                <div class="adress">Некрасова, 10</div>
+              </div>
+            </div>
+
+            <div class="info">
+              <div class="day">10 декабря, чт</div>
+              <div class="time">16:00</div>
+              <div class="ticket">
+                <a href="https://spb.kassir.ru/teatr/malenkiy-prints-905#431349"
+                  >Купить билет</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="maxw footer-inner">
+        <div class="copyright">© Пахан Про 2020-2021</div>
+        <div class="links">
+          <div class="link">
+            <a href="#">
+              <div
+                class="icon"
+                style="background-image: url(../img/vk-icon.svg)"
+              ></div>
+            </a>
+          </div>
+
+          <div class="link">
+            <a>
+              <div class="icon"></div>
+            </a>
+          </div>
+
+          <div class="link">
+            <a>
+              <div class="icon"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
