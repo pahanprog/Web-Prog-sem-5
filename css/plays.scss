@@ -223,6 +223,14 @@
 }
 
 @media (max-width: 768px) {
+  .info {
+    padding: 0 5px;
+    .row {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
   .items {
     grid-template-columns: 1fr;
     grid-gap: 30px;

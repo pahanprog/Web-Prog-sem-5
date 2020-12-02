@@ -1,71 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="./css/main.css" />
-    <script src="./js/slider.js"></script>
-    <script src="./js/main.js" defer></script>
-    <script src="./js/language.js" defer></script>
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title data-translate="hometitle">Home page</title>
-  </head>
+<head>
+  <link rel="stylesheet" href="./css/main.css" />
+  <script src="./js/slider.js"></script>
+  <script src="./js/main.js" defer></script>
+  <script src="./js/language.js" defer></script>
 
-  <body>
-    <header>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-translate="hometitle">Home page</title>
+</head>
+
+<body>
+  <header>
+    <div class="header_box">
+
       <div class="maxw header-inner">
+        <div class="burger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+
         <div class="logo">
           <a href="./index.html">
-            <h1>logo</h1>
           </a>
         </div>
 
         <nav>
-          <a
-            data-translate="header_news"
-            href="./news/index.html"
-            class="nav_item"
-            >Новости</a
-          >
-          <a
-            data-translate="header_plays"
-            href="./plays/index.html"
-            class="nav_item"
-            >Афиша</a
-          >
-          <a
-            data-translate="header_blog"
-            href="./blog/index.html"
-            class="nav_item"
-            >Блог</a
-          >
-          <a data-translate="header_rec" href="#rec" class="nav_item"
-            >Рекомендации</a
-          >
-          <a data-translate="header_theaters" href="#theaters" class="nav_item"
-            >Театры</a
-          >
+          <a data-translate="header_news" href="./news/index.html" class="nav_item">Новости</a>
+          <a data-translate="header_plays" href="./plays/index.html" class="nav_item">Афиша</a>
+          <a data-translate="header_blog" href="./blog/index.html" class="nav_item">Блог</a>
+          <a data-translate="header_rec" href="#rec" class="nav_item">Рекомендации</a>
+          <a data-translate="header_theaters" href="#theaters" class="nav_item">Театры</a>
         </nav>
 
-        <div class="right">
-          <div class="switcher">
-            <div class="title" onclick="dropdown(this)">
-              <span id="sel-lang" data-translate="selected-lang">ENG</span>
-              <span class="arrow right"></span>
-              <span class="arrow left"></span>
-            </div>
-            <div class="dropdown">
-              <span
-                data-translate="another-lang"
-                id="another-lang"
-                onclick="change_lang()"
-                >РУС</span
-              >
-            </div>
+        <div class="more" onclick="headerDropdow(this)">
+        </div>
+      </div>
+
+      <div class="header_options">
+        <div class="maxw options_inner">
+          <div class="search">
+            <form action="">
+              <input type="text">
+              <input type="submit" value="Искать">
+            </form>
           </div>
 
-          <div class="burger" onclick="toggleMenu()">
-            <span></span>
+          <div class="right">
+            <div class="switcher">
+              <div class="title" onclick="dropdown(this)">
+                <span id="sel-lang" data-translate="selected-lang">ENG</span>
+                <span class="arrow right"></span>
+                <span class="arrow left"></span>
+              </div>
+              <div class="dropdown">
+                <span data-translate="another-lang" id="another-lang" onclick="change_lang()">РУС</span>
+              </div>
+            </div>
+
+            <div class="user_counter">
+              <div data-translate="user_counter" class="title">
+                Пользователей онлайн
+              </div>
+              <div class="count"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -73,45 +75,23 @@
       <div class="mobile_menu">
         <ul>
           <li>
-            <a
-              data-translate="header_news"
-              href="./news/index.html"
-              class="nav_item"
-              >Новости</a
-            >
+            <a data-translate="header_news" href="./news/index.html" class="nav_item">Новости</a>
           </li>
 
           <li>
-            <a
-              data-translate="header_plays"
-              href="./plays/index.html"
-              class="nav_item"
-              >Афиша</a
-            >
+            <a data-translate="header_plays" href="./plays/index.html" class="nav_item">Афиша</a>
           </li>
 
           <li>
-            <a
-              data-translate="header_blog"
-              href="./blog/index.html"
-              class="nav_item"
-              >Блог</a
-            >
+            <a data-translate="header_blog" href="./blog/index.html" class="nav_item">Блог</a>
           </li>
 
           <li>
-            <a data-translate="header_rec" href="#rec" class="nav_item"
-              >Рекомендации</a
-            >
+            <a data-translate="header_rec" href="#rec" class="nav_item">Рекомендации</a>
           </li>
 
           <li>
-            <a
-              data-translate="header_theaters"
-              href="#theaters"
-              class="nav_item"
-              >Театры</a
-            >
+            <a data-translate="header_theaters" href="#theaters" class="nav_item">Театры</a>
           </li>
         </ul>
 
@@ -122,12 +102,7 @@
             <span class="arrow left"></span>
           </div>
           <div class="dropdown">
-            <span
-              data-translate="another-lang"
-              id="another-lang"
-              onclick="change_lang()"
-              >РУС</span
-            >
+            <span data-translate="another-lang" id="another-lang" onclick="change_lang()">РУС</span>
           </div>
         </div>
 
@@ -138,400 +113,350 @@
           <div class="count"></div>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <div class="shitbar" style="display: none">
-      <div class="user_counter">
-        <div data-translate="user_counter" class="title">
-          Пользователей онлайн
+  <div class="shitbar" style="display: none">
+    
+  </div>
+
+  <main class="topm maxw">
+    <section class="slide_and_news">
+      <div class="slide">
+        <div class="slide_wrapper-container-horizontal">
+          <div class="slide-wrapper">
+            <div class="item small current" data-sliderIndex="1">
+              <a href="#">
+                <div class="img" style="background-image: url(./img/news1.jpg)"></div>
+                <div data-translate="slider_tag_news" class="tag">
+                  Новости
+                </div>
+
+                <div data-translate="slider_news1" class="title">
+                  Lorem ipsum dolor sit amet.
+                </div>
+              </a>
+            </div>
+
+            <div class="item big next" data-sliderIndex="2">
+              <a href="#">
+                <div class="img" style="background-image: url(./img/Новость2.jpg)"></div>
+                <div data-translate="slider_tag_news" class="tag">
+                  Новости
+                </div>
+
+                <div data-translate="slider_news2" class="title">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </div>
+              </a>
+            </div>
+
+            <div class="item big" data-sliderIndex="3">
+              <a href="#">
+                <div class="img" style="background-image: url(./img/театр.jpg)"></div>
+                <div data-translate="slider_tag_blog" class="tag">Блог</div>
+
+                <div data-translate="slider_blog" class="title">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quisquam, aliquam!
+                </div>
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="count"></div>
+
+        <div class="arrow-btn left" onclick="arrowClick(this)"></div>
+
+        <div class="arrow-btn right" onclick="arrowClick(this)"></div>
       </div>
+
+      <div class="home_sidebar">
+        <ul class="news-list">
+          <li>
+            <a href="#">В Казани пройдёт фестиваль творческого объединения «Алиф»
+            </a>
+            <span>16:08, 29 ноября</span>
+          </li>
+
+          <li>
+            <a href="#">Театр им. Вахтангова покажет спектакль по древнеисландским
+              сагам
+            </a>
+            <span>13:56, 29 ноября</span>
+          </li>
+
+          <li>
+            <a href="#">Мариинка посвятит вечер балетов Плисецкой</a>
+            <span>12:01, 29 ноября</span>
+          </li>
+
+          <li>
+            <a href="#">В БТК репетируют пластический спектакль о нежности</a>
+            <span>19:59, 28 ноября</span>
+          </li>
+
+          <li>
+            <a href="#">Анастасия Патлай ставит «Неформат» в «Театре.doc»</a>
+            <span>19:34, 28 ноября</span>
+          </li>
+
+          <li>
+            <a href="#">Русский театр Литвы представит белорусский проект</a>
+            <span>16:51, 28 ноября</span>
+          </li>
+        </ul>
+        <a class="all_news" href="./news/index.html"> Все новости </a>
+      </div>
+    </section>
+
+    <div class="topm-sm seperator">
+      <div class="title">
+        <div class="circle"></div>
+        Блог
+      </div>
+      <div class="line"></div>
     </div>
 
-    <main class="topm maxw">
-      <section class="slide_and_news">
-        <div class="slide">
-          <div class="slide_wrapper-container-horizontal">
-            <div class="slide-wrapper">
-              <div class="item small current" data-sliderIndex="1">
-                <a href="#">
-                  <div
-                    class="img"
-                    style="background-image: url(./img/news1.jpg)"
-                  ></div>
-                  <div data-translate="slider_tag_news" class="tag">
-                    Новости
-                  </div>
-
-                  <div data-translate="slider_news1" class="title">
-                    Lorem ipsum dolor sit amet.
-                  </div>
-                </a>
-              </div>
-
-              <div class="item big next" data-sliderIndex="2">
-                <a href="#">
-                  <div
-                    class="img"
-                    style="background-image: url(./img/Новость2.jpg)"
-                  ></div>
-                  <div data-translate="slider_tag_news" class="tag">
-                    Новости
-                  </div>
-
-                  <div data-translate="slider_news2" class="title">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </div>
-                </a>
-              </div>
-
-              <div class="item big" data-sliderIndex="3">
-                <a href="#">
-                  <div
-                    class="img"
-                    style="background-image: url(./img/театр.jpg)"
-                  ></div>
-                  <div data-translate="slider_tag_blog" class="tag">Блог</div>
-
-                  <div data-translate="slider_blog" class="title">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quisquam, aliquam!
-                  </div>
-                </a>
-              </div>
+    <section class="topm-sm blog">
+      <div class="home_row">
+        <div class="item">
+          <a href="./blog/blog1.html" class="img_wrapper">
+            <div class="img" style="background-image: url(./img/театр.jpg)"></div>
+            <div class="title">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis,
+              obcaecati!
             </div>
+          </a>
+          <div class="body">
+            <div class="body_header">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+              repellat, modi tempora adipisci fugit dolores libero debitis
+              voluptatem labore qui. Obcaecati possimus perferendis dolorum
+              quo quasi, ratione soluta laborum consectetur.
+            </div>
+
+            <div class="meta">
+              <div class="date">2020</div>
+
+              <div class="author">Пахан</div>
+            </div>
+
+            <div class="tags"><a href="#">Пахан</a>, <a href="#">Про</a></div>
           </div>
-
-          <div class="arrow-btn left" onclick="arrowClick(this)"></div>
-
-          <div class="arrow-btn right" onclick="arrowClick(this)"></div>
         </div>
 
-        <div class="home_sidebar">
-          <ul class="news-list">
+        <div class="item">
+          <a href="./blog/blog1.html" class="img_wrapper">
+            <div class="img" style="background-image: url(./img/театр.jpg)"></div>
+            <div class="title">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis,
+              obcaecati!
+            </div>
+          </a>
+          <div class="body">
+            <div class="body_header">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+              repellat, modi tempora adipisci fugit dolores libero debitis
+              voluptatem labore qui. Obcaecati possimus perferendis dolorum
+              quo quasi, ratione soluta laborum consectetur.
+            </div>
+
+            <div class="meta">
+              <div class="date">2020</div>
+
+              <div class="author">Пахан</div>
+            </div>
+
+            <div class="tags"><a href="#">Пахан</a>, <a href="#">Про</a></div>
+          </div>
+        </div>
+
+        <div class="blog_sidebar">
+          <ul class="blog-list">
             <li>
-              <a href="#"
-                >В Казани пройдёт фестиваль творческого объединения «Алиф»
-              </a>
-              <span>16:08, 29 ноября</span>
+              <a href="#">Парижская опера запускает цифровую платформу</a>
+              <span>20:05, 26 ноября</span>
             </li>
 
             <li>
-              <a href="#"
-                >Театр им. Вахтангова покажет спектакль по древнеисландским
-                сагам
-              </a>
-              <span>13:56, 29 ноября</span>
+              <a href="#">Парижская опера запускает цифровую платформу</a>
+              <span>20:05, 26 ноября</span>
             </li>
 
             <li>
-              <a href="#">Мариинка посвятит вечер балетов Плисецкой</a>
-              <span>12:01, 29 ноября</span>
+              <a href="#">Парижская опера запускает цифровую платформу</a>
+              <span>20:05, 26 ноября</span>
             </li>
 
             <li>
-              <a href="#">В БТК репетируют пластический спектакль о нежности</a>
-              <span>19:59, 28 ноября</span>
+              <a href="#">Парижская опера запускает цифровую платформу</a>
+              <span>20:05, 26 ноября</span>
             </li>
 
             <li>
-              <a href="#">Анастасия Патлай ставит «Неформат» в «Театре.doc»</a>
-              <span>19:34, 28 ноября</span>
+              <a href="#">Парижская опера запускает цифровую платформу</a>
+              <span>20:05, 26 ноября</span>
             </li>
 
             <li>
-              <a href="#">Русский театр Литвы представит белорусский проект</a>
-              <span>16:51, 28 ноября</span>
+              <a href="#">Парижская опера запускает цифровую платформу</a>
+              <span>20:05, 26 ноября</span>
+            </li>
+
+            <li>
+              <a href="#">Парижская опера запускает цифровую платформу</a>
+              <span>20:05, 26 ноября</span>
+            </li>
+
+            <li>
+              <a href="#">Парижская опера запускает цифровую платформу</a>
+              <span>20:05, 26 ноября</span>
+            </li>
+
+            <li>
+              <a href="#">Парижская опера запускает цифровую платформу</a>
+              <span>20:05, 26 ноября</span>
+            </li>
+
+            <li>
+              <a href="#">Парижская опера запускает цифровую платформу</a>
+              <span>20:05, 26 ноября</span>
             </li>
           </ul>
-          <a class="all_news" href="./news/index.html"> Все новости </a>
+          <a class="all_blog" href="./blog/index.html"> Все статьи блога </a>
         </div>
-      </section>
-
-      <div class="topm-sm seperator">
-        <div class="title">
-          <div class="circle"></div>
-          Блог
-        </div>
-        <div class="line"></div>
       </div>
+    </section>
 
-      <section class="topm-sm blog">
-        <div class="home_row">
-          <div class="item">
-            <a href="./blog/blog1.html" class="img_wrapper">
-              <div
-                class="img"
-                style="background-image: url(./img/театр.jpg)"
-              ></div>
-              <div class="title">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis,
-                obcaecati!
-              </div>
-            </a>
-            <div class="body">
-              <div class="body_header">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
-                repellat, modi tempora adipisci fugit dolores libero debitis
-                voluptatem labore qui. Obcaecati possimus perferendis dolorum
-                quo quasi, ratione soluta laborum consectetur.
-              </div>
+    <div class="topm-sm seperator">
+      <div class="title">
+        <div class="circle"></div>
+        Рекомендации
+      </div>
+      <div class="line"></div>
+    </div>
 
-              <div class="meta">
-                <div class="date">2020</div>
-
-                <div class="author">Пахан</div>
-              </div>
-
-              <div class="tags"><a href="#">Пахан</a>, <a href="#">Про</a></div>
+    <section class="topm-sm recomdations" id="rec">
+      <div class="home_row">
+        <div class="item" id="1">
+          <a href="./recomandations/rec1.html">
+            <div class="img" style="background-image: url(./img/рек\ 1.jpg)"></div>
+            <div class="title">
+              <p>
+                27.11, 28.11 – “Бесы Достоевского” Константина Богомолова на
+                Бронной
+              </p>
             </div>
-          </div>
+          </a>
+        </div>
 
-          <div class="item">
-            <a href="./blog/blog1.html" class="img_wrapper">
-              <div
-                class="img"
-                style="background-image: url(./img/театр.jpg)"
-              ></div>
-              <div class="title">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis,
-                obcaecati!
-              </div>
-            </a>
-            <div class="body">
-              <div class="body_header">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
-                repellat, modi tempora adipisci fugit dolores libero debitis
-                voluptatem labore qui. Obcaecati possimus perferendis dolorum
-                quo quasi, ratione soluta laborum consectetur.
-              </div>
-
-              <div class="meta">
-                <div class="date">2020</div>
-
-                <div class="author">Пахан</div>
-              </div>
-
-              <div class="tags"><a href="#">Пахан</a>, <a href="#">Про</a></div>
+        <div class="item" id="2">
+          <a href="./recomandations/rec1.html">
+            <div class="img" style="background-image: url(./img/рек\ 1.jpg)"></div>
+            <div class="title">
+              <p>
+                27.11, 28.11 – “Бесы Достоевского” Константина Богомолова на
+                Бронной
+              </p>
             </div>
-          </div>
-
-          <div class="blog_sidebar">
-            <ul class="blog-list">
-              <li>
-                <a href="#">Парижская опера запускает цифровую платформу</a>
-                <span>20:05, 26 ноября</span>
-              </li>
-
-              <li>
-                <a href="#">Парижская опера запускает цифровую платформу</a>
-                <span>20:05, 26 ноября</span>
-              </li>
-
-              <li>
-                <a href="#">Парижская опера запускает цифровую платформу</a>
-                <span>20:05, 26 ноября</span>
-              </li>
-
-              <li>
-                <a href="#">Парижская опера запускает цифровую платформу</a>
-                <span>20:05, 26 ноября</span>
-              </li>
-
-              <li>
-                <a href="#">Парижская опера запускает цифровую платформу</a>
-                <span>20:05, 26 ноября</span>
-              </li>
-
-              <li>
-                <a href="#">Парижская опера запускает цифровую платформу</a>
-                <span>20:05, 26 ноября</span>
-              </li>
-
-              <li>
-                <a href="#">Парижская опера запускает цифровую платформу</a>
-                <span>20:05, 26 ноября</span>
-              </li>
-
-              <li>
-                <a href="#">Парижская опера запускает цифровую платформу</a>
-                <span>20:05, 26 ноября</span>
-              </li>
-
-              <li>
-                <a href="#">Парижская опера запускает цифровую платформу</a>
-                <span>20:05, 26 ноября</span>
-              </li>
-
-              <li>
-                <a href="#">Парижская опера запускает цифровую платформу</a>
-                <span>20:05, 26 ноября</span>
-              </li>
-            </ul>
-            <a class="all_blog" href="./blog/index.html"> Все статьи блога </a>
-          </div>
+          </a>
         </div>
-      </section>
 
-      <div class="topm-sm seperator">
-        <div class="title">
-          <div class="circle"></div>
-          Рекомендации
-        </div>
-        <div class="line"></div>
-      </div>
-
-      <section class="topm-sm recomdations" id="rec">
-        <div class="home_row">
-          <div class="item" id="1">
-            <a href="./recomandations/rec1.html">
-              <div
-                class="img"
-                style="background-image: url(./img/рек\ 1.jpg)"
-              ></div>
-              <div class="title">
-                <p>
-                  27.11, 28.11 – “Бесы Достоевского” Константина Богомолова на
-                  Бронной
-                </p>
-              </div>
-            </a>
-          </div>
-
-          <div class="item" id="2">
-            <a href="./recomandations/rec1.html">
-              <div
-                class="img"
-                style="background-image: url(./img/рек\ 1.jpg)"
-              ></div>
-              <div class="title">
-                <p>
-                  27.11, 28.11 – “Бесы Достоевского” Константина Богомолова на
-                  Бронной
-                </p>
-              </div>
-            </a>
-          </div>
-
-          <div class="item" id="3">
-            <a href="./recomandations/rec1.html">
-              <div
-                class="img"
-                style="background-image: url(./img/рек\ 1.jpg)"
-              ></div>
-              <div class="title">
-                <p>
-                  27.11, 28.11 – “Бесы Достоевского” Константина Богомолова на
-                  Бронной
-                </p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <div class="topm-sm seperator">
-        <div class="title">
-          <div class="circle"></div>
-          Театры
-        </div>
-        <div class="line"></div>
-      </div>
-
-      <section class="topm-sm theaters" id="theaters">
-        <div class="home_row">
-          <div class="item" id="1">
-            <a href="#">
-              <div
-                class="img"
-                style="background-image: url(./img/Мариинский\ театр.png)"
-              ></div>
-              <div class="title">Мариинский театр</div>
-            </a>
-          </div>
-
-          <div class="item" id="2">
-            <a href="#">
-              <div
-                class="img"
-                style="background-image: url(./img/александр.jpg)"
-              ></div>
-              <div class="title">Александринский</div>
-            </a>
-          </div>
-
-          <div class="item" id="3">
-            <a href="#">
-              <div
-                class="img"
-                style="background-image: url(./img/драма.jpg)"
-              ></div>
-              <div class="title">
-                Большой драматический театр и. Г. А Товстоногова
-              </div>
-            </a>
-          </div>
-
-          <div class="item" id="4">
-            <a href="#">
-              <div
-                class="img"
-                style="background-image: url(./img/балт.jpg)"
-              ></div>
-              <div class="title">Балтийский дом</div>
-            </a>
-          </div>
-
-          <div class="item" id="5">
-            <a href="./theaters/btk.html">
-              <div
-                class="img"
-                style="background-image: url(./img/кукол.jpg)"
-              ></div>
-              <div class="title">Большой театр кукол</div>
-            </a>
-          </div>
-
-          <div class="item" id="6">
-            <a href="#">
-              <div
-                class="img"
-                style="background-image: url(./img/мьюзик.jpg)"
-              ></div>
-              <div class="title">Мюзик-Холл</div>
-            </a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <div class="maxw footer-inner">
-        <div class="copyright">© Пахан Про 2020-2021</div>
-        <div class="links">
-          <div class="link">
-            <a href="#">
-              <div
-                class="icon"
-                style="background-image: url(./img/vk-icon.svg)"
-              ></div>
-            </a>
-          </div>
-
-          <div class="link">
-            <a>
-              <div class="icon"></div>
-            </a>
-          </div>
-
-          <div class="link">
-            <a>
-              <div class="icon"></div>
-            </a>
-          </div>
+        <div class="item" id="3">
+          <a href="./recomandations/rec1.html">
+            <div class="img" style="background-image: url(./img/рек\ 1.jpg)"></div>
+            <div class="title">
+              <p>
+                27.11, 28.11 – “Бесы Достоевского” Константина Богомолова на
+                Бронной
+              </p>
+            </div>
+          </a>
         </div>
       </div>
-    </footer>
-  </body>
+    </section>
+
+    <div class="topm-sm seperator">
+      <div class="title">
+        <div class="circle"></div>
+        Театры
+      </div>
+      <div class="line"></div>
+    </div>
+
+    <section class="topm-sm theaters" id="theaters">
+      <div class="home_row">
+        <div class="item" id="1">
+          <a href="#">
+            <div class="img" style="background-image: url(./img/Мариинский\ театр.png)"></div>
+            <div class="title">Мариинский театр</div>
+          </a>
+        </div>
+
+        <div class="item" id="2">
+          <a href="#">
+            <div class="img" style="background-image: url(./img/александр.jpg)"></div>
+            <div class="title">Александринский</div>
+          </a>
+        </div>
+
+        <div class="item" id="3">
+          <a href="#">
+            <div class="img" style="background-image: url(./img/драма.jpg)"></div>
+            <div class="title">
+              Большой драматический театр и. Г. А Товстоногова
+            </div>
+          </a>
+        </div>
+
+        <div class="item" id="4">
+          <a href="#">
+            <div class="img" style="background-image: url(./img/балт.jpg)"></div>
+            <div class="title">Балтийский дом</div>
+          </a>
+        </div>
+
+        <div class="item" id="5">
+          <a href="./theaters/btk.html">
+            <div class="img" style="background-image: url(./img/кукол.jpg)"></div>
+            <div class="title">Большой театр кукол</div>
+          </a>
+        </div>
+
+        <div class="item" id="6">
+          <a href="#">
+            <div class="img" style="background-image: url(./img/мьюзик.jpg)"></div>
+            <div class="title">Мюзик-Холл</div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="maxw footer-inner">
+      <div class="copyright">© Пахан Про 2020-2021</div>
+      <div class="links">
+        <div class="link">
+          <a href="#">
+            <div class="icon" style="background-image: url(./img/vk-icon.svg)"></div>
+          </a>
+        </div>
+
+        <div class="link">
+          <a>
+            <div class="icon"></div>
+          </a>
+        </div>
+
+        <div class="link">
+          <a>
+            <div class="icon"></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
 </html>

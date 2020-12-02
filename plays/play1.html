@@ -12,21 +12,87 @@
   </head>
   <body>
     <header>
-      <div class="maxw header-inner">
-        <div class="logo">
-          <a href="../index.html">
-            <h1>logo</h1>
-          </a>
+      <div class="header_box">
+  
+        <div class="maxw header-inner">
+          <div class="burger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+  
+  
+          <div class="logo">
+            <a href="../index.html">
+            </a>
+          </div>
+  
+          <nav>
+            <a data-translate="header_news" href="../news/index.html" class="nav_item">Новости</a>
+            <a data-translate="header_plays" href="../plays/index.html" class="nav_item">Афиша</a>
+            <a data-translate="header_blog" href="../blog/index.html" class="nav_item">Блог</a>
+            <a data-translate="header_rec" href="../index.html#rec" class="nav_item">Рекомендации</a>
+            <a data-translate="header_theaters" href="../index.html#theaters" class="nav_item">Театры</a>
+          </nav>
+  
+          <div class="more" onclick="headerDropdow(this)">
+          </div>
         </div>
-
-        <nav>
-          <a href="../news/index.html" class="nav_item">Новости</a>
-          <a href="../plays/index.html" class="nav_item">Афиша</a>
-          <a href="../blog/index.html" class="nav_item">Блог</a>
-          <a href="../index.html#theaters" class="nav_item">Театры</a>
-        </nav>
-
-        <div class="right">
+  
+        <div class="header_options">
+          <div class="maxw options_inner">
+            <div class="search">
+              <form action="">
+                <input type="text">
+                <input type="submit" value="Искать">
+              </form>
+            </div>
+  
+            <div class="right">
+              <div class="switcher">
+                <div class="title" onclick="dropdown(this)">
+                  <span id="sel-lang" data-translate="selected-lang">ENG</span>
+                  <span class="arrow right"></span>
+                  <span class="arrow left"></span>
+                </div>
+                <div class="dropdown">
+                  <span data-translate="another-lang" id="another-lang" onclick="change_lang()">РУС</span>
+                </div>
+              </div>
+  
+              <div class="user_counter">
+                <div data-translate="user_counter" class="title">
+                  Пользователей онлайн
+                </div>
+                <div class="count"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="mobile_menu">
+          <ul>
+            <li>
+              <a data-translate="header_news" href="../news/index.html" class="nav_item">Новости</a>
+            </li>
+  
+            <li>
+              <a data-translate="header_plays" href="../plays/index.html" class="nav_item">Афиша</a>
+            </li>
+  
+            <li>
+              <a data-translate="header_blog" href="../blog/index.html" class="nav_item">Блог</a>
+            </li>
+  
+            <li>
+              <a data-translate="header_rec" href="../index.html#rec" class="nav_item">Рекомендации</a>
+            </li>
+  
+            <li>
+              <a data-translate="header_theaters" href="../index.html#theaters" class="nav_item">Театры</a>
+            </li>
+          </ul>
+  
           <div class="switcher">
             <div class="title" onclick="dropdown(this)">
               <span id="sel-lang" data-translate="selected-lang">ENG</span>
@@ -34,55 +100,16 @@
               <span class="arrow left"></span>
             </div>
             <div class="dropdown">
-              <span
-                data-translate="another-lang"
-                id="another-lang"
-                onclick="change_lang()"
-                >РУС</span
-              >
+              <span data-translate="another-lang" id="another-lang" onclick="change_lang()">РУС</span>
             </div>
           </div>
-
-          <div class="burger" onclick="toggleMenu()">
-            <span></span>
+  
+          <div class="user_counter">
+            <div data-translate="user_counter" class="title">
+              Пользователей онлайн
+            </div>
+            <div class="count"></div>
           </div>
-        </div>
-      </div>
-
-      <div class="mobile_menu">
-        <ul>
-          <li>
-            <a href="../news/index.html" class="nav_item">Новости</a>
-          </li>
-
-          <li>
-            <a href="../plays/index.html" class="nav_item">Афиша</a>
-          </li>
-
-          <li>
-            <a href="../blog/index.html" class="nav_item">Блог</a>
-          </li>
-        </ul>
-
-        <div class="switcher">
-          <div class="title" onclick="dropdown(this)">
-            <span id="sel-lang" data-translate="selected-lang">ENG</span>
-            <span class="arrow right"></span>
-            <span class="arrow left"></span>
-          </div>
-          <div class="dropdown">
-            <span
-              data-translate="another-lang"
-              id="another-lang"
-              onclick="change_lang()"
-              >РУС</span
-            >
-          </div>
-        </div>
-
-        <div class="user_counter">
-          <div class="title">Пользователей онлайн</div>
-          <div class="count"></div>
         </div>
       </div>
     </header>
