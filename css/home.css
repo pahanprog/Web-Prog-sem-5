@@ -130,6 +130,7 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 15px 30px;
+  line-height: 26px;
 }
 
 .slide .slide_wrapper-container-horizontal .slide-wrapper .item.small {
