@@ -10,7 +10,6 @@
 .items .item {
   height: 360px;
   display: inline-block;
-  border: 1px solid black;
 }
 
 .items .item.big {

@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="../css/theater.css" />
     <script src="../js/main.js" defer></script>
     <script src="../js/imgSlider.js" defer></script>
+    <script src="../js/theaterTabs.js" defer></script>
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -235,11 +236,11 @@
 
       <div class="topm-sm inner_nav">
         <div class="nav_items">
-          <div class="item active" data-tab="history" onclick="">История</div>
+          <div class="item active" data-tab="history" onclick="tabNavClick(this)">История</div>
 
-          <div class="item" data-tab="location" onclick="">Местонахождение</div>
+          <div class="item" data-tab="location" onclick="tabNavClick(this)">Местонахождение</div>
 
-          <div class="item" data-tab="plays" onclick="">Репертуар</div>
+          <div class="item" data-tab="plays" onclick="tabNavClick(this)">Репертуар</div>
         </div>
 
         <div class="history tab">
@@ -349,7 +350,7 @@
         <div class="plays tab active">
           <div class="items">
             <div class="item">
-              <a href="./play1.html">
+              <a href="../plays/play1.html">
                 <div
                   class="img"
                   style="background-image: url(../img/маленькийпринц.jpg)"
@@ -360,7 +361,38 @@
                   <div class="descriprion">
                     Экзюпери для младших школьников — нарядный и сентиментальный
                   </div>
-                  <div class="location">Большой театр кукол</div>
+                </div>
+              </a>
+            </div>
+
+            <div class="item">
+              <a href="../plays/play1.html">
+                <div
+                  class="img"
+                  style="background-image: url(../img/маленькийпринц.jpg)"
+                ></div>
+                <div class="genre">Кукольный</div>
+                <div class="info_wrapper">
+                  <div class="title">Маленький принц</div>
+                  <div class="descriprion">
+                    Экзюпери для младших школьников — нарядный и сентиментальный
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="item">
+              <a href="../plays/play1.html">
+                <div
+                  class="img"
+                  style="background-image: url(../img/маленькийпринц.jpg)"
+                ></div>
+                <div class="genre">Кукольный</div>
+                <div class="info_wrapper">
+                  <div class="title">Маленький принц</div>
+                  <div class="descriprion">
+                    Экзюпери для младших школьников — нарядный и сентиментальный
+                  </div>
                 </div>
               </a>
             </div>
@@ -382,7 +414,7 @@
         <div class="copyright">© Пахан Про 2020-2021</div>
         <div class="links">
           <div class="link">
-            <a href="#">
+            <a href="https://vk.com/pahanbodibilder">
               <div
                 class="icon"
                 style="background-image: url(../img/vk-icon.svg)"
@@ -391,16 +423,11 @@
           </div>
 
           <div class="link">
-            <a>
-              <div class="icon"></div>
+            <a href="https://github.com/pahanprog">
+              <div class="icon" style="background-image: url('../img/github.svg');"></div>
             </a>
           </div>
 
-          <div class="link">
-            <a>
-              <div class="icon"></div>
-            </a>
-          </div>
         </div>
       </div>
     </footer>

@@ -33,12 +33,12 @@
 }
 
 .nav_items .item:hover {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.05);
   color: #3f826d;
 }
 
 .tab {
-  padding: 15px;
+  padding: 0 15px;
   display: none;
 }
 
@@ -111,6 +111,100 @@
 .location .bottom .metro {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
-  grid-column: 1/span 2;
+  grid-column: 1 / span 2;
+}
+
+.plays .items {
+  padding: 0 30px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 30px;
+}
+
+.plays .items .item {
+  width: 100%;
+  height: 360px;
+  display: inline-block;
+}
+
+.plays .items .item a {
+  text-decoration: none;
+  overflow: hidden;
+  width: 100%;
+  height: 360px;
+  display: block;
+  position: relative;
+}
+
+.plays .items .item .img {
+  -webkit-transition: all 3s ease-out;
+  transition: all 3s ease-out;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-box-shadow: inset 0px -110px 60px rgba(0, 0, 0, 0.7);
+          box-shadow: inset 0px -110px 60px rgba(0, 0, 0, 0.7);
+}
+
+.plays .items .item:hover .img {
+  -webkit-box-shadow: inset 0px -150px 60px rgba(0, 0, 0, 0.7);
+          box-shadow: inset 0px -150px 60px rgba(0, 0, 0, 0.7);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.plays .items .item .genre {
+  position: absolute;
+  top: 15px;
+  background-color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  font-size: 24px;
+  padding: 10px 15px;
+  color: #000;
+  font-weight: bolder;
+}
+
+.plays .items .item .info_wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.plays .items .item .info_wrapper .title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.plays .items .item .info_wrapper .descriprion {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .nav_items .item {
+    font-size: 16px;
+  }
+  .tab {
+    padding: 0;
+  }
+  .history .year_wrapper {
+    max-width: unset;
+    margin: 0;
+    padding: 0;
+  }
+  .plays .items {
+    padding: 0;
+  }
+  .location .top, .location .bottom {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=theater.css.map */
