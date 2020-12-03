@@ -60,7 +60,7 @@
   font-size: 22px;
   line-height: 30px;
   margin-bottom: 20px;
-  height: calc(30px * 3);
+  max-height: calc(30px * 3);
   text-overflow: ellipsis;
   overflow: hidden;
 }

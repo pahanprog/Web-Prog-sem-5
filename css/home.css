@@ -300,6 +300,7 @@
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   -webkit-box-shadow: inset 0px -80px 60px rgba(0, 0, 0, 0.7);
           box-shadow: inset 0px -80px 60px rgba(0, 0, 0, 0.7);
 }
