@@ -198,7 +198,7 @@
   .history .year_wrapper {
     max-width: unset;
     margin: 0;
-    padding: 0;
+    padding: 15px;
   }
   .plays .items {
     padding: 0;
