@@ -25,6 +25,9 @@
   position: relative;
   margin-left: -20px;
   margin-right: -20px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .slide::before, .slide::after {

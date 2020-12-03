@@ -20,6 +20,7 @@
     position: relative;
     margin-left: -20px;
     margin-right: -20px;
+    height: fit-content;
     &::before,
     &::after {
       content: "";
@@ -328,6 +329,7 @@
       width: calc(100% - 30px) !important;
       flex: 0 0 calc(100% - 30px) !important;
       max-width: calc(100% - 30px) !important;
+
     }
     .slide_and_news {
       grid-template-columns: 1fr 1fr;
