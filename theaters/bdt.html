@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/theater.css" />
+    <script src="../js/main.js" defer></script>
+    <script src="../js/imgSlider.js" defer></script>
+    <script src="../js/theaterTabs.js" defer></script>
+    <script src="../js/language.js" defer></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Большой драматический театр</title>
+
+    <!-- <script
+      async
+      src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"
+    ></script>
+    <script>
+      window.googletag = window.googletag || { cmd: [] };
+      googletag.cmd.push(function () {
+        googletag
+          .defineSlot(
+            "/6355419/Travel/Europe/France/Paris",
+            [300, 250],
+            "banner-ad"
+          )
+          .addService(googletag.pubads());
+        googletag.enableServices();
+      });
+    </script> -->
+</head>
+
+<body>
+    <header>
+        <div class="header_box">
+            <div class="maxw header-inner">
+                <div class="burger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="logo">
+                    <a href="../index.html"> </a>
+                </div>
+
+                <nav>
+                    <a data-translate="header_news" href="../news/index.html" class="nav_item">Новости</a>
+                    <a data-translate="header_plays" href="../plays/index.html" class="nav_item">Афиша</a>
+                    <a data-translate="header_blog" href="../blog/index.html" class="nav_item">Блог</a>
+                    <a data-translate="header_rec" href="../index.html#rec" class="nav_item">Рекомендации</a>
+                    <a data-translate="header_theaters" href="../index.html#theaters" class="nav_item">Театры</a>
+                </nav>
+
+                <div class="more" onclick="headerDropdow(this)"></div>
+            </div>
+
+            <div class="header_options">
+                <div class="maxw options_inner">
+                    <div class="search">
+                        <form action="">
+                            <input type="text" />
+                            <input type="submit" value="Искать" />
+                        </form>
+                    </div>
+
+                    <div class="right">
+                        <div class="switcher">
+                            <div class="title" onclick="dropdown(this)">
+                                <span id="sel-lang" data-translate="selected-lang">ENG</span>
+                                <span class="arrow right"></span>
+                                <span class="arrow left"></span>
+                            </div>
+                            <div class="dropdown">
+                                <span data-translate="another-lang" id="another-lang" onclick="change_lang()">РУС</span>
+                            </div>
+                        </div>
+
+                        <div class="user_counter">
+                            <div data-translate="user_counter" class="title">
+                                Пользователей онлайн
+                            </div>
+                            <div class="count"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mobile_menu">
+                <ul>
+                    <li>
+                        <a data-translate="header_news" href="../news/index.html" class="nav_item">Новости</a>
+                    </li>
+
+                    <li>
+                        <a data-translate="header_plays" href="../plays/index.html" class="nav_item">Афиша</a>
+                    </li>
+
+                    <li>
+                        <a data-translate="header_blog" href="../blog/index.html" class="nav_item">Блог</a>
+                    </li>
+
+                    <li>
+                        <a data-translate="header_rec" href="../index.html#rec" class="nav_item">Рекомендации</a>
+                    </li>
+
+                    <li>
+                        <a data-translate="header_theaters" href="../index.html#theaters" class="nav_item">Театры</a>
+                    </li>
+                </ul>
+
+                <div class="switcher">
+                    <div class="title" onclick="dropdown(this)">
+                        <span id="sel-lang" data-translate="selected-lang">ENG</span>
+                        <span class="arrow right"></span>
+                        <span class="arrow left"></span>
+                    </div>
+                    <div class="dropdown">
+                        <span data-translate="another-lang" id="another-lang" onclick="change_lang()">РУС</span>
+                    </div>
+                </div>
+
+                <div class="user_counter">
+                    <div data-translate="user_counter" class="title">
+                        Пользователей онлайн
+                    </div>
+                    <div class="count"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="topm-sm maxw">
+        <div class="section_title">Большой драматический театр и. Г. А Товстоногова</div>
+
+        <div class="center">
+            <div class="inner">
+                <div class="img_slider_wrapper">
+                    <div class="img_slider">
+                        <div class="img_wrapper">
+                            <img src="../img/драма.jpg" />
+                        </div>
+
+                        <div class="img_wrapper">
+                            <img src="../img/бдт.jpg" />
+                        </div>
+
+                        <div class="img_wrapper">
+                            <img src="../img/бдт1.jpg" alt="" />
+                        </div>
+                    </div>
+
+                    <div class="actions">
+                        <div class="open"></div>
+                        <div class="close"></div>
+                    </div>
+
+                    <div class="arrow-btn left" onclick="imgSliderArrowClick(this)"></div>
+
+                    <div class="arrow-btn right" onclick="imgSliderArrowClick(this)"></div>
+                </div>
+
+                <div class="arrow-btn left" onclick="imgSliderArrowClick(this)"></div>
+
+                <div class="arrow-btn right" onclick="imgSliderArrowClick(this)"></div>
+            </div>
+        </div>
+
+        <div class="topm-sm inner_nav">
+            <div class="nav_items">
+                <div class="item" data-tab="history" onclick="tabNavClick(this)">
+                    История
+                </div>
+
+                <div class="item active" data-tab="location" onclick="tabNavClick(this)">
+                    Местонахождение
+                </div>
+
+                <div class="item" data-tab="plays" onclick="tabNavClick(this)">
+                    Репертуар
+                </div>
+            </div>
+
+            <div class="history tab">
+                <div class="year_wrapper">
+                    <div class="year">1919 </div>
+
+                    <div class="content">
+                        Большой драматический театр открылся 15 февраля 1919 года трагедией Ф. Шиллера «Дон Карлос»,
+                        начав свои выступления в Оперной студии Консерватории.
+                    </div>
+                </div>
+
+
+                <div class="year_wrapper">
+                    <div class="year">1956 </div>
+
+                    <div class="content">
+                        В начале 1956 г. Большой драматический готовился отметить свой тридцать седьмой день рождения.
+
+                        В самый канун праздника труппе был представлен новый, одиннадцатый по счету, главный режиссер.
+
+                        Так в БДТ началась эпоха, имя которой Георгий Александрович Товстоногов.
+                    </div>
+                </div>
+
+                <div class="year_wrapper">
+                    <div class="year">1964 </div>
+
+                    <div class="content">
+                        Присвоено звание Академического, в 1970 году открыта Малая сцена, с 1992 года носит имя Г.А.
+                        Товстоногова.
+                    </div>
+                </div>
+            </div>
+
+        <div class="location tab active">
+            <div class="top">
+                <div class="info_item">
+                    <div class="title">касса</div>
+                    <div class="content">8 (812) 244-10-71</div>
+                </div>
+
+                <div class="info_item">
+                    <div class="title">адрес</div>
+                    <div class="content">Санкт-Петербург, набережная реки Фонтанки, 65</div>
+                </div>
+            </div>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1999.2727221704172!2d30.328338316504677!3d59.92761666994922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963100ac45850d%3A0xe8f91088e6be94de!2z0JHQvtC70YzRiNC-0Lkg0LTRgNCw0LzQsNGC0LjRh9C10YHQutC40Lkg0YLQtdCw0YLRgCDQuNC80LXQvdC4INCTLiDQkC4g0KLQvtCy0YHRgtC-0L3QvtCz0L7QstCw!5e0!3m2!1sru!2sru!4v1607106847506!5m2!1sru!2sru" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+            <div class="bottom topm">
+                <div class="info_item">
+                    <div class="title">режим работы</div>
+                    <div class="content">пн-вс 10.30–18.00</div>
+                </div>
+
+                <div class="info_item">
+                    <div class="title">официальный сайт</div>
+                    <div class="content">
+                        <a href="https://bdt.spb.ru/">bdt.spb.ru</a>
+                    </div>
+                </div>
+
+                <div class="info_item topm-sm metro">
+                    <div class="title">метро</div>
+                    <div class="content">
+                        Садовая, Сенная площадь, Спасская 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="plays tab">
+            <div class="items">
+                <div class="item">
+                    <a href="#">
+                        <div class="img" style="background-image: url(../img/тритолстяка.jpg)"></div>
+                        <div class="genre">Сказка-антиутопия</div>
+                        <div class="info_wrapper">
+                            <div class="title">Три толстяка</div>
+                            <div class="descriprion">
+                                Много лет назад в ходе научного эксперимента, проводимого в обстановке абсолютной секретности, был открыт порт в другое измерение и на Землю проник сгусток темной космической энергии «Три толстяка» («Т-3»), превративший жизнь людей в хаос, полный бессмысленного зла.
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="#">
+                        <div class="img" style="background-image: url(../img/трисестры.jpg)"></div>
+                        <div class="genre">Драматический</div>
+                        <div class="info_wrapper">
+                            <div class="title">Три сестры</div>
+                            <div class="descriprion">
+                                Спектакль «Три сестры» по пьесе Антона Павловича Чехова поставлен на Основной сцене БДТ режиссером Владимиром Панковым.                              </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- <div id="banner-ad">
+          <script>
+            googletag.cmd.push(function() {
+              googletag.display('banner-ad');
+            });
+          </script>
+        </div> -->
+    </main>
+
+    <footer>
+        <div class="maxw footer-inner">
+            <div class="copyright">© Пахан Про 2020-2021</div>
+            <div class="links">
+                <div class="link">
+                    <a href="https://vk.com/pahanbodibilder">
+                        <div class="icon" style="background-image: url(../img/vk-icon.svg)"></div>
+                    </a>
+                </div>
+
+                <div class="link">
+                    <a href="https://github.com/pahanprog">
+                        <div class="icon" style="background-image: url('../img/github.svg')"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

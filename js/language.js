@@ -1,5 +1,5 @@
 const dictionary = {
-    'hometitle': {ru: "Домашняя страница",en: "Home page"},
+    'hometitle': {ru: "СПБ теарт",en: "SPB theater"},
     'selected-lang': {ru: "РУС", en: "ENG"},
     'another-lang' : {ru: "ENG",en: "РУС"},
     'header_news': {ru: "Новости",en: "News"},

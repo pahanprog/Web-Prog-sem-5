@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/theater.css" />
+    <script src="../js/main.js" defer></script>
+    <script src="../js/imgSlider.js" defer></script>
+    <script src="../js/theaterTabs.js" defer></script>
+    <script src="../js/language.js" defer></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Малый драматический театр</title>
+
+    <!-- <script
+      async
+      src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"
+    ></script>
+    <script>
+      window.googletag = window.googletag || { cmd: [] };
+      googletag.cmd.push(function () {
+        googletag
+          .defineSlot(
+            "/6355419/Travel/Europe/France/Paris",
+            [300, 250],
+            "banner-ad"
+          )
+          .addService(googletag.pubads());
+        googletag.enableServices();
+      });
+    </script> -->
+  </head>
+
+  <body>
+    <header>
+      <div class="header_box">
+        <div class="maxw header-inner">
+          <div class="burger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="logo">
+            <a href="../index.html"> </a>
+          </div>
+
+          <nav>
+            <a
+              data-translate="header_news"
+              href="../news/index.html"
+              class="nav_item"
+              >Новости</a
+            >
+            <a
+              data-translate="header_plays"
+              href="../plays/index.html"
+              class="nav_item"
+              >Афиша</a
+            >
+            <a
+              data-translate="header_blog"
+              href="../blog/index.html"
+              class="nav_item"
+              >Блог</a
+            >
+            <a
+              data-translate="header_rec"
+              href="../index.html#rec"
+              class="nav_item"
+              >Рекомендации</a
+            >
+            <a
+              data-translate="header_theaters"
+              href="../index.html#theaters"
+              class="nav_item"
+              >Театры</a
+            >
+          </nav>
+
+          <div class="more" onclick="headerDropdow(this)"></div>
+        </div>
+
+        <div class="header_options">
+          <div class="maxw options_inner">
+            <div class="search">
+              <form action="">
+                <input type="text" />
+                <input type="submit" value="Искать" />
+              </form>
+            </div>
+
+            <div class="right">
+              <div class="switcher">
+                <div class="title" onclick="dropdown(this)">
+                  <span id="sel-lang" data-translate="selected-lang">ENG</span>
+                  <span class="arrow right"></span>
+                  <span class="arrow left"></span>
+                </div>
+                <div class="dropdown">
+                  <span
+                    data-translate="another-lang"
+                    id="another-lang"
+                    onclick="change_lang()"
+                    >РУС</span
+                  >
+                </div>
+              </div>
+
+              <div class="user_counter">
+                <div data-translate="user_counter" class="title">
+                  Пользователей онлайн
+                </div>
+                <div class="count"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mobile_menu">
+          <ul>
+            <li>
+              <a
+                data-translate="header_news"
+                href="../news/index.html"
+                class="nav_item"
+                >Новости</a
+              >
+            </li>
+
+            <li>
+              <a
+                data-translate="header_plays"
+                href="../plays/index.html"
+                class="nav_item"
+                >Афиша</a
+              >
+            </li>
+
+            <li>
+              <a
+                data-translate="header_blog"
+                href="../blog/index.html"
+                class="nav_item"
+                >Блог</a
+              >
+            </li>
+
+            <li>
+              <a
+                data-translate="header_rec"
+                href="../index.html#rec"
+                class="nav_item"
+                >Рекомендации</a
+              >
+            </li>
+
+            <li>
+              <a
+                data-translate="header_theaters"
+                href="../index.html#theaters"
+                class="nav_item"
+                >Театры</a
+              >
+            </li>
+          </ul>
+
+          <div class="switcher">
+            <div class="title" onclick="dropdown(this)">
+              <span id="sel-lang" data-translate="selected-lang">ENG</span>
+              <span class="arrow right"></span>
+              <span class="arrow left"></span>
+            </div>
+            <div class="dropdown">
+              <span
+                data-translate="another-lang"
+                id="another-lang"
+                onclick="change_lang()"
+                >РУС</span
+              >
+            </div>
+          </div>
+
+          <div class="user_counter">
+            <div data-translate="user_counter" class="title">
+              Пользователей онлайн
+            </div>
+            <div class="count"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="topm-sm maxw">
+      <div class="section_title">Малый драматический театр</div>
+
+      <div class="center">
+        <div class="inner">
+          <div class="img_slider_wrapper">
+            <div class="img_slider">
+              <div class="img_wrapper">
+                <img src="../img/малыйдр.jpg" />
+              </div>
+
+              <div class="img_wrapper">
+                <img src="../img/мдт.jpg" />
+              </div>
+
+              <div class="img_wrapper">
+                <img src="../img/мдт2.jpg" alt="" />
+              </div>
+            </div>
+
+            <div class="actions">
+              <div class="open"></div>
+              <div class="close"></div>
+            </div>
+
+            <div
+              class="arrow-btn left"
+              onclick="imgSliderArrowClick(this)"
+            ></div>
+
+            <div
+              class="arrow-btn right"
+              onclick="imgSliderArrowClick(this)"
+            ></div>
+          </div>
+
+          <div class="arrow-btn left" onclick="imgSliderArrowClick(this)"></div>
+
+          <div
+            class="arrow-btn right"
+            onclick="imgSliderArrowClick(this)"
+          ></div>
+        </div>
+      </div>
+
+      <div class="topm-sm inner_nav">
+        <div class="nav_items">
+          <div class="item" data-tab="history" onclick="tabNavClick(this)">
+            История
+          </div>
+
+          <div
+            class="item active"
+            data-tab="location"
+            onclick="tabNavClick(this)"
+          >
+            Местонахождение
+          </div>
+
+          <div class="item" data-tab="plays" onclick="tabNavClick(this)">
+            Репертуар
+          </div>
+        </div>
+
+        <div class="history tab">
+          <div class="year_wrapper">
+            <div class="year">1944</div>
+
+            <div class="content">
+              Малый драматический театр был открыт в 1944 году в Ленинграде,
+              когда большинство театральных коллективов находилось в эвакуации.
+              Созданный решением Облисполкома, театр не имел ни определённой
+              творческой программы, ни собственного дома. Небольшая труппа
+              давала спектакли в городках и сёлах Ленинградской области.
+            </div>
+          </div>
+
+          <div class="year_wrapper">
+            <div class="year">1973</div>
+
+            <div class="content">
+              Кардинальный перелом в репертуарной политике МДТ произошел в 1973
+              году, когда театр возглавил Ефим Падве. Он сделал ставку на
+              серьезную драматургию и пригласил к сотрудничеству молодых
+              режиссёров, среди которых был Лев Додин. Постепенно театр стал
+              приобретать известность в городе и популярность в среде
+              интеллигенции.
+            </div>
+          </div>
+
+          <div class="year_wrapper">
+            <div class="year">1974</div>
+
+            <div class="content">
+              Первой работой Льва Додина в Малом драматическом театре стал в
+              1974 году спектакль "Разбойник" по пьесе К. Чапека. Он привлёк
+              внимание публики и критики оригинальностью решения и новизной
+              сценического языка. За этой постановкой последовали другие:
+              "Татуированная роза" Т. Уильямса (1977), "Живи и помни" В.
+              Распутина (1979), "Назначение" А. Володина (1979). Премьера
+              спектакля "Дом" по одноимённому роману Ф. Абрамова в 1980 году
+              ознаменовала рождение особого художественного феномена, названного
+              впоследствии Театром Додина.
+            </div>
+          </div>
+
+          <div class="year_wrapper">
+            <div class="year">1988</div>
+
+            <div class="content">
+              В 1988 году прошли первые большие гастроли театра за рубежом.
+              Оглушительный успех "Звезд на утреннем небе" в Великобритании и
+              дилогии "Братья и сестры" во Франции ознаменовали начало
+              международного признания МДТ. В 1994 году Правительство Франции
+              наградило Льва Додина Орденом литературы и искусства офицерского
+              достоинства "за огромный вклад в дело сотрудничества русской и
+              французской культур". В 1998 году решением Генеральной Ассамблеи
+              Союза европейских театров МДТ был присвоен статус Театра Европы.
+              Сегодня только три театра в мире располагают этим статусом –
+              парижский Одеон, миланский Пикколо театр и петербургский Малый
+              драматический.
+            </div>
+          </div>
+
+          <div class="year_wrapper">
+            <div class="year">2007</div>
+
+            <div class="content">
+              В 2007 году с приходом в театр выпускников последнего курса Льва
+              Додина труппа МДТ пополнилась яркими молодыми дарованиями. Сегодня
+              невозможно представить новые спектакли без Елизаветы Боярской,
+              Данилы Козловского, Олега Рязанцева, Станислава Никольского, Елены
+              Соломоновой, Екатерины Клеопиной, Уршулы Малки и многих других.
+            </div>
+          </div>
+
+          <div class="year_wrapper">
+            <div class="year">2014</div>
+
+            <div class="content">
+              3 декабря 2014 года Совет по сохранению культурного наследия при
+              Правительстве Санкт-Петербурга утвердил Проект строительства Новой
+              сцены Академического Малого Драматического театра - Театра Европы
+              по адресу ул. Звенигородская, 7. Проект предполагает возведение
+              нового театрального комплекса с сохранением исторического фасада
+              двухэтажного здания бывшего фуражного двора Семеновского полка.
+              Театр сможет принимать до 600 зрителей в зале главного корпуса и
+              75 – на Камерной сцене. Авторы концепции Проекта – Лев Додин и
+              Александр Боровский. Идея строительства Новой сцены Театра
+              одобрена Правительством Российской Федерации.
+            </div>
+          </div>
+        </div>
+
+        <div class="location tab active">
+          <div class="top">
+            <div class="info_item">
+              <div class="title">касса</div>
+              <div class="content">8 (812) 244-10-71</div>
+            </div>
+
+            <div class="info_item">
+              <div class="title">адрес</div>
+              <div class="content">
+                Санкт-Петербург, ул. Рубинштейна, 18
+              </div>
+            </div>
+          </div>
+
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1999.1143687645895!2d30.342883116096647!3d59.93024438187307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469631a6027c614f%3A0x748b3b2b9dc6451e!2z0JDQutCw0LTQtdC80LjRh9C10YHQutC40Lkg0JzQsNC70YvQuSDQtNGA0LDQvNCw0YLQuNGH0LXRgdC60LjQuSDRgtC10LDRgtGAIOKAkyDQotC10LDRgtGAINCV0LLRgNC-0L_Riw!5e0!3m2!1sru!2sru!4v1607108629901!5m2!1sru!2sru" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+          <div class="bottom topm">
+            <div class="info_item">
+              <div class="title">режим работы</div>
+              <div class="content">пн-вс 10.30–18.00</div>
+            </div>
+
+            <div class="info_item">
+              <div class="title">официальный сайт</div>
+              <div class="content">
+                <a href="http://www.mdt-dodin.ru/">mdt-dodin.ru</a>
+              </div>
+            </div>
+
+            <div class="info_item topm-sm metro">
+              <div class="title">метро</div>
+              <div class="content">Достоевская, Владимирская</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="plays tab">
+          <div class="items">
+            <div class="item">
+              <a href="../plays/play1.html">
+                <div
+                  class="img"
+                  style="background-image: url(../img/гамлет.jpg); background-position: center;"
+                ></div>
+                <div class="genre">Драматический</div>
+                <div class="info_wrapper">
+                  <div class="title">Гамлет</div>
+                  <div class="descriprion">
+                    Российский режиссер предлагает совсем незнакомого Гамлета.
+                    Его видение отличается от других бесцветных и столь
+                    бесполезных меланхолично-рационалистических взглядов на
+                    датского принца.
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="item">
+              <a href="#">
+                <div
+                  class="img"
+                  style="background-image: url(../img/бесы.jpg); background-position: center;"
+                ></div>
+                <div class="genre">Драматический</div>
+                <div class="info_wrapper">
+                  <div class="title">Бесы</div>
+                  <div class="descriprion">
+                    грандиозная трилогия Льва Додина и Эдуарда Кочергина по
+                    знаменитому роману Ф.М.Достоевского. Уникальный опыт
+                    трехчастного спектакля, рассчитанного на целый день.
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div id="banner-ad">
+          <script>
+            googletag.cmd.push(function() {
+              googletag.display('banner-ad');
+            });
+          </script>
+        </div> -->
+    </main>
+
+    <footer>
+      <div class="maxw footer-inner">
+        <div class="copyright">© Пахан Про 2020-2021</div>
+        <div class="links">
+          <div class="link">
+            <a href="https://vk.com/pahanbodibilder">
+              <div
+                class="icon"
+                style="background-image: url(../img/vk-icon.svg)"
+              ></div>
+            </a>
+          </div>
+
+          <div class="link">
+            <a href="https://github.com/pahanprog">
+              <div
+                class="icon"
+                style="background-image: url('../img/github.svg')"
+              ></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
