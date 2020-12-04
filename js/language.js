@@ -5,7 +5,7 @@ const dictionary = {
     'header_news': {ru: "Новости",en: "News"},
     'header_plays': {ru: "Афиша", en: "Plays"},
     'header_blog': {ru: "Блог", en: "Blog"},
-    'header_rec': {ru: "Рекомнадиции", en: "Recommendations"},
+    'header_rec': {ru: "Рекомендации", en: "Recommendations"},
     'header_theaters': {ru: "Театры", en: "Theaters"},
     'user_counter': {ru: "Пользователей онлайн", en: "Users online"},
     'slider_tag_news': {ru: "Новости", en: "News"},

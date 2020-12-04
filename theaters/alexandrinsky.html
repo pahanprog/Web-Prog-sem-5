@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/theater.css" />
+    <script src="../js/main.js" defer></script>
+    <script src="../js/imgSlider.js" defer></script>
+    <script src="../js/theaterTabs.js" defer></script>
+    <script src="../js/language.js" defer></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Большой театр кукол</title>
+
+    <!-- <script
+      async
+      src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"
+    ></script>
+    <script>
+      window.googletag = window.googletag || { cmd: [] };
+      googletag.cmd.push(function () {
+        googletag
+          .defineSlot(
+            "/6355419/Travel/Europe/France/Paris",
+            [300, 250],
+            "banner-ad"
+          )
+          .addService(googletag.pubads());
+        googletag.enableServices();
+      });
+    </script> -->
+  </head>
+  <body>
+    <header>
+      <div class="header_box">
+        <div class="maxw header-inner">
+          <div class="burger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="logo">
+            <a href="../index.html"> </a>
+          </div>
+
+          <nav>
+            <a
+              data-translate="header_news"
+              href="../news/index.html"
+              class="nav_item"
+              >Новости</a
+            >
+            <a
+              data-translate="header_plays"
+              href="../plays/index.html"
+              class="nav_item"
+              >Афиша</a
+            >
+            <a
+              data-translate="header_blog"
+              href="../blog/index.html"
+              class="nav_item"
+              >Блог</a
+            >
+            <a
+              data-translate="header_rec"
+              href="../index.html#rec"
+              class="nav_item"
+              >Рекомендации</a
+            >
+            <a
+              data-translate="header_theaters"
+              href="../index.html#theaters"
+              class="nav_item"
+              >Театры</a
+            >
+          </nav>
+
+          <div class="more" onclick="headerDropdow(this)"></div>
+        </div>
+
+        <div class="header_options">
+          <div class="maxw options_inner">
+            <div class="search">
+              <form action="">
+                <input type="text" />
+                <input type="submit" value="Искать" />
+              </form>
+            </div>
+
+            <div class="right">
+              <div class="switcher">
+                <div class="title" onclick="dropdown(this)">
+                  <span id="sel-lang" data-translate="selected-lang">ENG</span>
+                  <span class="arrow right"></span>
+                  <span class="arrow left"></span>
+                </div>
+                <div class="dropdown">
+                  <span
+                    data-translate="another-lang"
+                    id="another-lang"
+                    onclick="change_lang()"
+                    >РУС</span
+                  >
+                </div>
+              </div>
+
+              <div class="user_counter">
+                <div data-translate="user_counter" class="title">
+                  Пользователей онлайн
+                </div>
+                <div class="count"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mobile_menu">
+          <ul>
+            <li>
+              <a
+                data-translate="header_news"
+                href="../news/index.html"
+                class="nav_item"
+                >Новости</a
+              >
+            </li>
+
+            <li>
+              <a
+                data-translate="header_plays"
+                href="../plays/index.html"
+                class="nav_item"
+                >Афиша</a
+              >
+            </li>
+
+            <li>
+              <a
+                data-translate="header_blog"
+                href="../blog/index.html"
+                class="nav_item"
+                >Блог</a
+              >
+            </li>
+
+            <li>
+              <a
+                data-translate="header_rec"
+                href="../index.html#rec"
+                class="nav_item"
+                >Рекомендации</a
+              >
+            </li>
+
+            <li>
+              <a
+                data-translate="header_theaters"
+                href="../index.html#theaters"
+                class="nav_item"
+                >Театры</a
+              >
+            </li>
+          </ul>
+
+          <div class="switcher">
+            <div class="title" onclick="dropdown(this)">
+              <span id="sel-lang" data-translate="selected-lang">ENG</span>
+              <span class="arrow right"></span>
+              <span class="arrow left"></span>
+            </div>
+            <div class="dropdown">
+              <span
+                data-translate="another-lang"
+                id="another-lang"
+                onclick="change_lang()"
+                >РУС</span
+              >
+            </div>
+          </div>
+
+          <div class="user_counter">
+            <div data-translate="user_counter" class="title">
+              Пользователей онлайн
+            </div>
+            <div class="count"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="topm-sm maxw">
+      <div class="section_title">Александринский театр</div>
+
+      <div class="center">
+        <div class="inner">
+          <div class="img_slider_wrapper">
+            <div class="img_slider">
+              <div class="img_wrapper">
+                <img src="../img/бтк.jpg" alt="" />
+              </div>
+
+              <div class="img_wrapper">
+                <img src="../img/бткзал.jpg" alt="" />
+              </div>
+
+              <div class="img_wrapper">
+                <img src="../img/бтксцена.jpg" alt="" />
+              </div>
+            </div>
+
+            <div class="actions">
+              <div class="open"></div>
+              <div class="close"></div>
+            </div>
+
+            <div
+              class="arrow-btn left"
+              onclick="imgSliderArrowClick(this)"
+            ></div>
+
+            <div
+              class="arrow-btn right"
+              onclick="imgSliderArrowClick(this)"
+            ></div>
+          </div>
+
+          <div class="arrow-btn left" onclick="imgSliderArrowClick(this)"></div>
+
+          <div
+            class="arrow-btn right"
+            onclick="imgSliderArrowClick(this)"
+          ></div>
+        </div>
+      </div>
+
+      <div class="topm-sm inner_nav">
+        <div class="nav_items">
+          <div class="item" data-tab="history" onclick="tabNavClick(this)">
+            История
+          </div>
+
+          <div
+            class="item active"
+            data-tab="location"
+            onclick="tabNavClick(this)"
+          >
+            Местонахождение
+          </div>
+
+          <div class="item" data-tab="plays" onclick="tabNavClick(this)">
+            Репертуар
+          </div>
+        </div>
+
+        <div class="history tab">
+          <div class="year_wrapper">
+            <div class="year">1756</div>
+
+            <div class="content">
+              30 августа Указом императрицы Елизаветы Петровны в
+              Санкт-Петербурге основан русский для представления трагедий и
+              комедий театр, от которого ведет историю труппа Александринского
+              театра. Директором театра был назначен драматург Александр
+              Петрович Сумароков. Труппу возглавил актер Фёдор Григорьевич
+              Волков. Театр стал первым государственным публичным театром в
+              России и начал свои регулярные представления в бывшем Головкинском
+              доме на Васильевском острове. Впоследствии здание было перестроено
+              для Академии художеств.
+            </div>
+          </div>
+
+          <div class="year_wrapper">
+            <div class="year">1759</div>
+
+            <div class="content">
+              Высочайшим распоряжением по придворному ведомству театр определен
+              в ведомство Придворной конторы.
+            </div>
+          </div>
+
+          <div class="year_wrapper">
+            <div class="year">1766</div>
+
+            <div class="content">
+              Труппа театра вошла в состав учрежденной императорской театральной
+              дирекции.
+            </div>
+          </div>
+
+          <div class="year_wrapper">
+            <div class="year">1783</div>
+
+            <div class="content">
+              Русская драматическая труппа начинает свои выступления в здании
+              вновь построенного Большого каменного театра в Санкт-Петербурге,
+              впоследствии перестроенного для Санкт-Петербургской консерватории.
+            </div>
+          </div>
+
+          <div class="year_wrapper">
+            <div class="year">1831</div>
+
+            <div class="content">
+              Труппой театра впервые полностью исполнена комедия А.C. Грибоедова
+              «Горе от ума». Роль Чацкого сыграл В.А. Каратыгин.
+            </div>
+          </div>
+
+          <div class="year_wrapper">
+            <div class="year">1832</div>
+
+            <div class="content">
+              Санкт-петербургская русская драматическая труппа начинает свои
+              выступления в новом здании в самом центре Санкт-Петербурга,
+              созданном по проекту великого архитектора К.И. Росси. В честь
+              супруги императора Николая Первого Александры Фёдоровны здание
+              получает название — Александринский театр. Здание Александринского
+              театра — шедевр мировой театральной архитектуры, охраняется
+              ЮНЕСКО.
+            </div>
+          </div>
+
+          <div class="year_wrapper">
+            <div class="year">1836</div>
+
+            <div class="content">
+              На сцене Александринского театра состоялась премьера «Ревизора»
+              Н.В. Гоголя. Активное участие в постановке спектакля принимал сам
+              автор. В роли Хлестакова — Н.О. Дюр.
+            </div>
+          </div>
+
+          <div class="year_wrapper">
+            <div class="year">1836</div>
+
+            <div class="content">
+              На сцене Александринского театра состоялась премьера «Ревизора»
+              Н.В. Гоголя. Активное участие в постановке спектакля принимал сам
+              автор. В роли Хлестакова — Н.О. Дюр.
+            </div>
+          </div>
+
+          <div class="year_wrapper">
+            <div class="year">1932</div>
+
+            <div class="content">
+              Столетний юбилей здания Александринского театра (тогда
+              Ленинградского государственного театра драмы) отмечается как
+              крупный юбилей общественно-политической и культурной жизни страны.
+              При этом, следуя идеологической линии тогдашней власти, семьдесят
+              шесть лет произвольно отсекаются от творческой истории первой
+              государственной драматической труппы России.
+            </div>
+          </div>
+
+          <div class="year_wrapper">
+            <div class="year">1941-1944</div>
+
+            <div class="content">
+              Театр в эвакуации. Труппа работает в Новосибирске, на сцене театра
+              «Красный факел». На сцене Александринского театра во время блокады
+              выступает Ленинградский театр музыкальной комедии.
+            </div>
+          </div>
+
+          <div class="year_wrapper">
+            <div class="year">1991</div>
+
+            <div class="content">
+              Театру возвращается название Александринский. Официальное название
+              театра: Российский государственный академический театр драмы им.
+              А.С. Пушкина (Александринский).
+            </div>
+          </div>
+
+          <div class="year_wrapper">
+            <div class="year">2006</div>
+
+            <div class="content">
+              250-летие Александринского театра празднуется как юбилей первого
+              государственного театра России и начала государственной политики в
+              области отечественного сценического искусства. Осуществляется
+              масштабная реконструкция-реставрация исторического здания театра.
+              Открывается историческая экспозиция «Музей русской драмы». Впервые
+              проводится Международный театральный фестиваль «Александринский».
+              В рамках творческой программы «Новая жизнь традиции» греческий
+              режиссер Теодорос Терзопулос ставит трагедию Софокла «Эдип-царь».
+              Этим спектаклем был открыт Первый Международный театральный
+              фестиваль «Александринский». «Живой труп» Л.Н. Толстого.
+              Постановка В.В. Фокина. В роли Феди Протасова — С.И. Паршин.
+            </div>
+          </div>
+
+          <div class="year_wrapper">
+            <div class="year">2013</div>
+
+            <div class="content">
+              Открывается Новая сцена Александринского театра.
+            </div>
+          </div>
+
+          <div class="year_wrapper">
+            <div class="year">2014</div>
+
+            <div class="content">
+              Александринский театр получил статус Национального достояния
+            </div>
+          </div>
+
+          <div class="year_wrapper">
+            <div class="year">2016</div>
+
+            <div class="content">
+              Российский государственный академический театр драмы им. А.С.
+              Пушкина (Александринский) был внесен в Государственный свод особо
+              ценных объектов культурного наследия народов Российской Федерации.
+            </div>
+          </div>
+
+          <div class="year_wrapper">
+            <div class="year">2016</div>
+
+            <div class="content">
+              260-лет со дня основания Александринского театра. В числе
+              торжественных мероприятий - полуденный выстрел из пушки с
+              Нарышкина бастиона Петропавловской крепости в честь юбилея,
+              открытый для прессы и гостей театра сбор труппы.
+            </div>
+          </div>
+
+          <div class="year_wrapper">
+            <div class="year">2016</div>
+
+            <div class="content">
+              Впервые на сцене Александринского театра поставлен роман Ф.М.
+              Достоевского «Преступление и наказание». Режиссер – Аттила
+              Виднянский.
+            </div>
+          </div>
+
+          <div class="year_wrapper">
+            <div class="year">2020</div>
+
+            <div class="content">
+              Российский государственный академический театр им. А.С. Пушкина
+              (Александринский) переименован в Национальный драматический театр
+              России (Александринский театр).
+            </div>
+          </div>
+        </div>
+
+        <div class="location tab active">
+          <div class="top">
+            <div class="info_item">
+              <div class="title">касса</div>
+              <div class="content">+7 (812) 312-15-45</div>
+            </div>
+
+            <div class="info_item">
+              <div class="title">адрес</div>
+              <div class="content">Санкт-Петербург, площадь Островского, д.6</div>
+            </div>
+          </div>
+
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1999.0215258646847!2d30.333968316096716!3d59.93178498187367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963107f8736b6d%3A0xf0dd227c1af184ab!2z0JDQu9C10LrRgdCw0L3QtNGA0LjQvdGB0LrQuNC5INGC0LXQsNGC0YA!5e0!3m2!1sru!2sru!4v1607100159185!5m2!1sru!2sru" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+          <div class="bottom topm">
+            <div class="info_item">
+              <div class="title">режим работы</div>
+              <div class="content">пн-вс 10.30–18.00</div>
+            </div>
+
+            <div class="info_item">
+              <div class="title">официальный сайт</div>
+              <div class="content">
+                <a href="https://alexandrinsky.ru/">alexandrinsky.ru</a>
+              </div>
+            </div>
+
+            <div class="info_item topm-sm metro">
+              <div class="title">метро</div>
+              <div class="content">
+                Гостиный двор
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="plays tab">
+          <div class="items">
+            <div class="item">
+              <a href="../plays/play1.html">
+                <div
+                  class="img"
+                  style="background-image: url(../img/маленькийпринц.jpg)"
+                ></div>
+                <div class="genre">Кукольный</div>
+                <div class="info_wrapper">
+                  <div class="title">Маленький принц</div>
+                  <div class="descriprion">
+                    Экзюпери для младших школьников — нарядный и сентиментальный
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="item">
+              <a href="../plays/play1.html">
+                <div
+                  class="img"
+                  style="background-image: url(../img/маленькийпринц.jpg)"
+                ></div>
+                <div class="genre">Кукольный</div>
+                <div class="info_wrapper">
+                  <div class="title">Маленький принц</div>
+                  <div class="descriprion">
+                    Экзюпери для младших школьников — нарядный и сентиментальный
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="item">
+              <a href="../plays/play1.html">
+                <div
+                  class="img"
+                  style="background-image: url(../img/маленькийпринц.jpg)"
+                ></div>
+                <div class="genre">Кукольный</div>
+                <div class="info_wrapper">
+                  <div class="title">Маленький принц</div>
+                  <div class="descriprion">
+                    Экзюпери для младших школьников — нарядный и сентиментальный
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div id="banner-ad">
+          <script>
+            googletag.cmd.push(function() {
+              googletag.display('banner-ad');
+            });
+          </script>
+        </div> -->
+    </main>
+
+    <footer>
+      <div class="maxw footer-inner">
+        <div class="copyright">© Пахан Про 2020-2021</div>
+        <div class="links">
+          <div class="link">
+            <a href="https://vk.com/pahanbodibilder">
+              <div
+                class="icon"
+                style="background-image: url(../img/vk-icon.svg)"
+              ></div>
+            </a>
+          </div>
+
+          <div class="link">
+            <a href="https://github.com/pahanprog">
+              <div
+                class="icon"
+                style="background-image: url('../img/github.svg')"
+              ></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
