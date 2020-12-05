@@ -13,6 +13,7 @@ body {
   font-size: 16px;
   line-height: 20px;
   font-family: "Open Sans", sans-serif;
+  position: relative;
 }
 
 header,
@@ -28,6 +29,45 @@ header,
   top: 0;
   left: 0;
   z-index: 99;
+}
+
+.scroll_to_top {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 50px;
+  height: 50px;
+  border-radius: 6px;
+  position: fixed;
+  right: 20px;
+  bottom: 60px;
+  -webkit-transition: background-color .3s, opacity .3s;
+  transition: background-color .3s, opacity .3s;
+  cursor: pointer;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+}
+
+.scroll_to_top .arrow.left, .scroll_to_top .arrow.right {
+  width: 20px;
+  height: 4px;
+  background-color: #000;
+}
+
+.scroll_to_top .arrow.right {
+  right: 9px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.scroll_to_top .arrow.left {
+  right: 21px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.scroll_to_top:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .header-inner {

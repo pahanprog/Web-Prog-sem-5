@@ -1,5 +1,6 @@
 const mobileMenu = document.querySelector(".mobile_menu");
 const burger = document.querySelector("header .burger");
+const scrollToTop = document.querySelector('.scroll_to_top');
 
 function toggleMenu() {
   mobileMenu.classList.toggle("active");
@@ -41,7 +42,26 @@ document.addEventListener("click", (e) => {
   }
 });
 
+document.addEventListener("DOMContentLoaded", (e) => {
+  scrollFunction();
+});
+
 function headerDropdow(it) {
   it.classList.toggle('active')
   document.querySelector('header .header_options').classList.toggle('active')
+}
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > window.innerHeight/4 || document.documentElement.scrollTop > window.innerHeight/4) {
+    scrollToTop.style.opacity = "1";
+  } else {
+    scrollToTop.style.opacity = "0";
+  }
+}
+
+function scrollToTopFunc() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }
